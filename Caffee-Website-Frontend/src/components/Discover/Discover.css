@@ -1,0 +1,28 @@
+.offer-section {
+    text-align: center;
+    padding: 40px;
+    background-color: #fff;
+  }
+  
+  .offer-heading {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #100b08;
+    margin-bottom: 20px;
+  }
+  
+  .offer-text {
+    font-size: 1.2em;
+    color: #333;
+  }
+  
+  .offer-text a {
+    color: #d35400;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .offer-text a:hover {
+    text-decoration: underline;
+  }
+  

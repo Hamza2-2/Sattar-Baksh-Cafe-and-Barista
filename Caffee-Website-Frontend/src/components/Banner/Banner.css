@@ -1,0 +1,74 @@
+.banner {
+  position: relative;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+  min-height: 400px;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  min-height: 650px;
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  color: black;
+  max-width: 90%;
+  padding: 20px;
+}
+
+.banner-text h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.banner-text p {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  margin: 20px 0;
+  line-height: 1.4;
+}
+
+.shop-now {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  transition: background-color 0.3s ease;
+}
+
+.shop-now:hover {
+  background-color: #333;
+}
+
+@media (max-width: 768px) {
+  .banner-text {
+    left: 50%;
+    text-align: center;
+    padding: 15px;
+  }
+  
+  .banner-image {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-text {
+    padding: 10px;
+  }
+  
+  .banner-image {
+    min-height: 300px;
+  }
+}

@@ -1,0 +1,56 @@
+SATTAR BAKSH CAFE - REQUIREMENTS & SETUP
+========================================
+
+REQUIREMENTS
+------------
+- Git
+- Node.js 18 or newer (includes npm)
+- MySQL 8 or MariaDB server, running locally (default port 3306)
+- Optional: a Gmail account with 2-Step Verification + an App Password
+  (only needed for order/registration emails; the app runs without it)
+
+SETUP
+-----
+1. Clone
+     git clone https://github.com/Hamza2-2/Sattar-Baksh-Cafe-and-Barista.git
+     cd Sattar-Baksh-Cafe-and-Barista
+
+2. Create the database
+     mysql -u root -p < Caffee-Website-Backend/database_setup.sql
+   (Run the other .sql files in that folder only if the app reports missing tables/columns.)
+
+3. Create a limited database user (do not run the app as root)
+     CREATE USER 'cafe_app'@'localhost' IDENTIFIED BY '<choose-a-strong-password>';
+     GRANT SELECT, INSERT, UPDATE, DELETE ON coffee_store.* TO 'cafe_app'@'localhost';
+
+4. Configure the backend
+     cd Caffee-Website-Backend
+     copy .env.example .env          (Linux/macOS: cp .env.example .env)
+   Edit .env and fill in every value:
+     DB_HOST, DB_PORT, DB_USER, DB_PASSWORD, DB_NAME   -> from step 3
+     JWT_SECRET   -> required; the server will not start without it. Generate one with:
+                     node -e "console.log(require('crypto').randomBytes(48).toString('hex'))"
+     EMAIL_USER, EMAIL_PASS, COMPANY_EMAIL -> optional (Gmail address + Gmail App Password)
+     PORT         -> keep 5000 (the frontend expects http://localhost:5000)
+
+5. Install and create the admin account
+     npm install
+     Windows (PowerShell):
+       $env:ADMIN_USERNAME="admin"; $env:ADMIN_PASSWORD="<at-least-12-characters>"; node createAdmin.js
+     Linux/macOS:
+       ADMIN_USERNAME=admin ADMIN_PASSWORD='<at-least-12-characters>' node createAdmin.js
+
+6. Start the backend
+     npm start
+
+7. Start the frontend (new terminal)
+     cd Caffee-Website-Frontend
+     npm install
+     npm run dev
+   Open the address Vite prints (usually http://localhost:5173). Admin panel: /admin
+
+SECURITY NOTES
+--------------
+- Never commit .env (it is git-ignored). Use .env.example as the template.
+- Use a unique strong JWT_SECRET and database password per environment.
+- Use a Gmail App Password, never your normal Gmail password.

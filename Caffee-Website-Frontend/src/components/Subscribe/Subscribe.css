@@ -1,0 +1,22 @@
+.subscribe-section{
+    padding: 120px 0;
+    background: url(/src/assets/product-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.subscribe-section h2{
+        font-size: 54px;
+        color: #FFFFFF;
+        font-family: 'Playfair Display', serif;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .subscribe-section p{
+        font-size: 22px;
+        color: #FFFFFF;
+        font-family: 'Playfair Display', serif;
+        margin-bottom: 30px;
+        text-align: center;
+    }

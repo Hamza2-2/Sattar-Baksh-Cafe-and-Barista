@@ -1,0 +1,175 @@
+.footer {
+  width: 100%;
+  background: linear-gradient(135deg, #00704A 0%, #004D2E 100%);
+  padding: 40px 0;
+  border-top: 2px solid #00A862;
+}
+
+.footer-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-brand {
+  margin-bottom: 32px;
+  width: 100%;
+}
+
+.brand-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 12px;
+}
+
+.footer-logo {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+  transform: scale(1.05);
+}
+
+.brand-name {
+  font-size: 1.875rem;
+  font-weight: 700;
+  font-style: italic;
+  margin: 0;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.tagline {
+  font-size: 0.875rem;
+  color: #d4d4d4;
+  line-height: 1.5;
+}
+
+.footer-section {
+  margin-bottom: 32px;
+  width: 100%;
+}
+
+.footer-heading {
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #d4d4d4;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #00A862;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  margin-right: 8px;
+}
+
+.footer-newsletter {
+  width: 100%;
+}
+
+.newsletter-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.newsletter-text {
+  font-size: 0.875rem;
+  color: #d4d4d4;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.subscription-form {
+  position: relative;
+}
+
+.email-input {
+  width: 100%;
+  padding: 8px;
+  padding-right: 40px;
+  border: none;
+  border-bottom: 2px solid #00A862;
+  background-color: transparent;
+  font-size: 0.875rem;
+  outline: none;
+  color: #ffffff;
+  transition: border-color 0.2s;
+}
+
+.email-input::placeholder {
+  color: #9ca3af;
+}
+
+.email-input:focus {
+  border-color: #00A862;
+}
+
+.submit-button {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #00A862;
+  transition: color 0.2s;
+}
+
+.submit-button:hover {
+  color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer-brand {
+    width: 25%;
+    margin-bottom: 0;
+  }
+
+  .footer-section {
+    width: 20%;
+    margin-bottom: 0;
+  }
+
+  .footer-newsletter {
+    width: 25%;
+  }
+}

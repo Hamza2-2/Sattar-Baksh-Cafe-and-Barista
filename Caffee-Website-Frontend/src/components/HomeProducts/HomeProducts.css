@@ -1,0 +1,196 @@
+.recent-products-section {
+    text-align: center;
+    padding: 2rem;
+    width: auto;
+  }
+  
+  .recent-products-section h2 {
+    font-size: 34px;
+  }
+  .recent-products-section p {
+    color: #a1887f;
+  }
+
+  .carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    font-style: 'Arimo';
+  }
+  
+  .product-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 1.5rem;
+    padding: 1rem 2rem;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+
+  }
+  .carousel-wrapper {
+    width: 1100px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .animated-carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: max-content;
+  }
+  .product-carousel::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .product-card-home {
+    background: #fffaf5;
+    padding: 1rem;
+    flex: 0 0 220px;
+    margin-right: 1.5rem;
+  }
+  
+  .image-wrapper {
+    position: relative;
+    height: 250px;
+  }
+  
+  .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .product-card-home .like-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .product-card-home .like-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .product-card-home .like-btn.liked {
+    animation: heartBeat 0.3s ease-in-out;
+  }
+
+  @keyframes heartBeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+  }
+  
+  .badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .badge.sale,
+  .badge.discount {
+    background-color: #333;
+  }
+  
+  .badge.soldout {
+    background-color: crimson;
+  }
+  
+  .badge.discount {
+    top: 35px;
+  }
+  
+  .product-info-home {
+    margin-top: 1rem;
+  }
+  
+  .product-info-home p{
+    color:  #3b3b3b;
+  }
+  .product-name-home {
+    font-size: 16px;
+    font-weight: bold;
+   
+  }
+  
+  .product-price-home strong {
+    margin-top: 5px;
+    font-weight: bold;
+    color: #3b3b3b;
+    
+  }
+  
+  .old-price-home {
+    text-decoration: line-through;
+    color: gray;
+    font-size: 14px;
+    margin-left: 8px;
+    font-weight: bold;
+  }
+  
+  .arrow-prod {
+    border: none;
+    background-color: #d8d8d8;
+    color: rgb(0, 0, 0);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 25px;
+    cursor: pointer;
+    transition: background 0.3s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    padding-bottom: 2px;
+    margin-left: 30px;
+    margin-right: 40px;
+    display: none;
+  }
+  
+  .arrow-prod.left {
+    left: 0px;
+  }
+  
+  .arrow-prod.right {
+    right: 0px;
+  } 
+  
+  .arrow-prod:hover {
+    background-color: #232323;
+    color: white;
+  }
+  
+
+  .arrow-prod {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    display: none !important;
+  }
+  
+  .carousel-container:hover .arrow-prod {
+    opacity: 0;
+    pointer-events: none;
+    display: none !important;
+  }

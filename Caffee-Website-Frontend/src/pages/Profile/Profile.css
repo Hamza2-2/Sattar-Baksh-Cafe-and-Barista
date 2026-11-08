@@ -1,0 +1,268 @@
+.profile-page {
+  width: 100%;
+  background-color: #fafafa;
+  min-height: 100vh;
+}
+
+.profile-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.profile-header h1 {
+  font-size: 2rem;
+  color: #00704A;
+  font-weight: 700;
+}
+
+.logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background-color: #fee;
+  color: #c33;
+  border: 1px solid #ffcccc;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #ffd4d4;
+}
+
+.not-logged-in {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.not-logged-in h1 {
+  font-size: 2rem;
+  color: #00704A;
+  margin-bottom: 15px;
+}
+
+.not-logged-in p {
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.login-btn,
+.register-btn {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1rem;
+}
+
+.login-btn {
+  background: linear-gradient(135deg, #00704A 0%, #00A862 100%);
+  color: white;
+}
+
+.login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 112, 74, 0.3);
+}
+
+.register-btn {
+  background-color: white;
+  color: #00704A;
+  border: 2px solid #00704A;
+}
+
+.register-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.profile-tabs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  margin-bottom: 30px;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.tab-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #333;
+  transition: all 0.3s;
+}
+
+.tab-btn:hover {
+  border-color: #00704A;
+  color: #00704A;
+}
+
+.tab-btn.active {
+  background: linear-gradient(135deg, #00704A 0%, #00A862 100%);
+  color: white;
+  border-color: transparent;
+}
+
+.profile-content {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.tab-content h2 {
+  font-size: 1.8rem;
+  color: #00704A;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.tab-content p {
+  color: #666;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.overview-card {
+  background: #f9f9f9;
+  padding: 25px;
+  border-radius: 10px;
+  border-left: 4px solid #00A862;
+}
+
+.overview-card h3 {
+  font-size: 1.2rem;
+  color: #00704A;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.overview-card p {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.overview-card strong {
+  color: #00704A;
+}
+
+.active {
+  background-color: #efe;
+  color: #3c3;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.action-btn,
+.manage-btn,
+.shop-btn {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #00704A 0%, #00A862 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+  margin-top: 15px;
+}
+
+.action-btn:hover,
+.manage-btn:hover,
+.shop-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 112, 74, 0.3);
+}
+
+.no-data {
+  text-align: center;
+  padding: 40px 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+}
+
+.no-data p {
+  color: #999;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .profile-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .profile-tabs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .profile-content {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-container {
+    padding: 30px 15px;
+  }
+
+  .profile-tabs {
+    grid-template-columns: 1fr;
+  }
+
+  .overview-grid {
+    grid-template-columns: 1fr;
+  }
+}

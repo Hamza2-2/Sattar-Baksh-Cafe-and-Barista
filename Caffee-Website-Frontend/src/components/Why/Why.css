@@ -1,0 +1,71 @@
+.why-section{
+    padding: 20px 0;
+
+}
+.why-section h2{
+    color: #6F4E37;
+    font-size: 54px;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+}
+.why-section p{
+    color: #707070;
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.why-cards{
+    display: flex;
+    gap:20px;
+}
+.why-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFF9F1;
+    border: 1px solid #F9C06A;
+    padding: 29px;
+    transition: background-color 0.3s ease; 
+}
+.why-card:hover {
+    background-color: #FFEED8;
+}
+.why-card h3{
+    font-size: 28px;
+    color: #6F4E37;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+.why-span{
+    color: #707070;
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+}
+.why-btm-details p{
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: #707070;
+    font-size: 20px;
+}
+.why-btm-details h4{
+font-size: 30px;
+color: #6F4E37;
+font-family: 'Playfair Display', serif;
+font-weight: bold;
+text-align: center;
+}
+.why-section a {
+    top: 110px;
+    background-color: #F9C06A;
+    border-radius: 30px;
+    color: #1E1E1E;
+    text-decoration: none;
+    display: inline-block;
+}
+.why-btm-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
