@@ -18,6 +18,7 @@ CREATE TABLE products (
   category VARCHAR(100) NOT NULL,
   price DECIMAL(10, 2) NOT NULL,
   in_stock BOOLEAN DEFAULT TRUE,
+  visible BOOLEAN DEFAULT TRUE,
   description TEXT,
   image_url VARCHAR(500),
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP

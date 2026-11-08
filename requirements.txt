@@ -17,7 +17,8 @@ SETUP
 
 2. Create the database
      mysql -u root -p < Caffee-Website-Backend/database_setup.sql
-   (Run the other .sql files in that folder only if the app reports missing tables/columns.)
+   (This creates every table the app needs; the admin table is created in step 5.
+    Do NOT run fix_instock_column.sql or update_orders_table.sql - they DROP existing tables.)
 
 3. Create a limited database user (do not run the app as root)
      CREATE USER 'cafe_app'@'localhost' IDENTIFIED BY '<choose-a-strong-password>';

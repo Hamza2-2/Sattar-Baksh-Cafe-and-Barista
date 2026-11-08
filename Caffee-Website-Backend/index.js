@@ -315,10 +315,12 @@ app.get("/products", async (req, res) => {
   }
 });
 
-app.get("/products/:id", async (req, res) => {
+app.get("/products/:id", async (req, res, next) => {
   let connection;
   try {
     const { id } = req.params;
+    // let /products/search and /products/filter (declared below) handle non-numeric paths
+    if (!/^\d+$/.test(id)) return next();
     connection = await pool.getConnection();
     const [products] = await connection.execute(
       "SELECT * FROM products WHERE id = ?",
